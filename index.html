@@ -11,18 +11,13 @@
             padding: 30px;
         }
 
-        img {
-            max-width: 360px;
-            width: 90%;
-            border-radius: 20px;
-        }
-
         h1 {
             font-size: 42px;
+            margin-bottom: 10px;
         }
 
         p, li {
-            font-size: 22px;
+            font-size: 21px;
         }
 
         .box {
@@ -30,13 +25,24 @@
             border: 1px solid #333;
             border-radius: 18px;
             padding: 20px;
-            max-width: 520px;
+            max-width: 540px;
             margin: 25px auto;
         }
 
-        ul {
-            text-align: left;
-            display: inline-block;
+        .rule {
+            background: #111;
+            border: 1px solid #333;
+            border-radius: 14px;
+            padding: 14px;
+            margin: 12px 0;
+            font-size: 22px;
+        }
+
+        img {
+            max-width: 360px;
+            width: 90%;
+            border-radius: 20px;
+            margin-top: 10px;
         }
 
         a {
@@ -49,31 +55,37 @@
             border-radius: 12px;
             font-size: 22px;
         }
+
+        .small {
+            font-size: 17px;
+            color: #bbb;
+        }
     </style>
 </head>
 <body>
 
-<h1>💸 Support VRV</h1>
+<h1>🔥 Save VRV!</h1>
+
+<p>Every gift, chat, like, or donation affects the live timer.</p>
 
 <div class="box">
     <h2>⏱️ Timer Rules</h2>
-    <p>Every support adds time to the live timer!</p>
 
-    <ul>
-        <li>🎁 TikTok Gifts: 1 coin = +30 seconds</li>
-        <li>💬 Chat Message: +2 seconds</li>
-        <li>💸 GCash Donation: ₱1 = +30 seconds</li>
-    </ul>
-
-    <p>Example: ₱10 = +300 seconds / +5 minutes</p>
+    <div class="rule">🎁 TikTok Gifts<br><b>1 Coin = +15 Seconds</b></div>
+    <div class="rule">💬 Chat Message<br><b>+2 Seconds</b></div>
+    <div class="rule">❤️ Likes<br><b>50 Likes = -10 Seconds</b></div>
+    <div class="rule">💸 GCash Direct<br><b>₱1 = +60 Seconds / +1 Minute</b></div>
 </div>
 
-<h2>GCash Donation</h2>
-<p>Scan the QR code below.</p>
+<div class="box">
+    <h2>💸 GCash Donation</h2>
+    <p>Scan the QR code below.</p>
 
-<img src="gcash.png">
+    <img src="gcash.png">
 
-<p>GCash Name: VRV</p>
+    <p><b>GCash Name: VRV</b></p>
+    <p class="small">GCash direct gives the highest time bonus.</p>
+</div>
 
 <a href="https://discord.gg/6SDzjyH6P" target="_blank">
 Join My Discord Server
