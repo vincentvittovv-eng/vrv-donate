@@ -1,72 +1,107 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Support VRV</title>
+    <title>VRV Hub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
-            background: #111;
+            margin: 0;
+            background: #080808;
             color: white;
             font-family: Arial, sans-serif;
             text-align: center;
-            padding: 30px;
+        }
+
+        .hero {
+            padding: 40px 20px;
+            background: linear-gradient(180deg, #3a0000, #080808);
         }
 
         h1 {
-            font-size: 42px;
+            font-size: 44px;
             margin-bottom: 10px;
         }
 
-        p, li {
-            font-size: 21px;
+        h2 {
+            color: #ff3030;
+        }
+
+        p {
+            font-size: 20px;
+            color: #ddd;
         }
 
         .box {
-            background: #1d1d1d;
-            border: 1px solid #333;
+            background: #141414;
+            border: 1px solid #3a0000;
             border-radius: 18px;
-            padding: 20px;
-            max-width: 540px;
+            padding: 22px;
+            max-width: 720px;
             margin: 25px auto;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.15);
         }
 
         .rule {
-            background: #111;
-            border: 1px solid #333;
+            background: #0d0d0d;
+            border: 1px solid #442020;
             border-radius: 14px;
             padding: 14px;
             margin: 12px 0;
-            font-size: 22px;
+            font-size: 21px;
         }
 
         img {
-            max-width: 360px;
-            width: 90%;
-            border-radius: 20px;
-            margin-top: 10px;
+            max-width: 100%;
+            border-radius: 16px;
+            margin-top: 12px;
         }
 
-        a {
+        .qr {
+            max-width: 360px;
+            width: 90%;
+        }
+
+        a, button {
             display: inline-block;
-            margin: 15px;
-            padding: 15px 25px;
-            background: #5865F2;
+            margin: 10px;
+            padding: 14px 24px;
+            background: #d60000;
             color: white;
+            border: none;
             text-decoration: none;
             border-radius: 12px;
-            font-size: 22px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        a:hover, button:hover {
+            background: #ff2020;
+        }
+
+        .codeBox {
+            background: #050505;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 10px;
+            font-size: 18px;
+            word-wrap: break-word;
         }
 
         .small {
-            font-size: 17px;
-            color: #bbb;
+            font-size: 16px;
+            color: #aaa;
         }
     </style>
 </head>
+
 <body>
 
-<h1>🔥 Save VRV!</h1>
-
-<p>Every gift, chat, like, or donation affects the live timer.</p>
+<div class="hero">
+    <h1>🔥 VRV Hub</h1>
+    <p>Support the stream, join the community, and copy my CODM settings.</p>
+</div>
 
 <div class="box">
     <h2>⏱️ Timer Rules</h2>
@@ -80,15 +115,62 @@
     <h2>💸 GCash Donation</h2>
     <p>Scan the QR code below.</p>
 
-    <img src="gcash.png">
+    <img class="qr" src="gcash.png">
 
     <p><b>GCash Name: VRV</b></p>
     <p class="small">GCash direct gives the highest time bonus.</p>
 </div>
 
-<a href="https://discord.gg/ZSTPktyWJ" target="_blank">
-Join My Discord Server
-</a>
+<div class="box">
+    <h2>🎮 My Loadouts</h2>
+    <p>Here are my current CODM loadout screenshots.</p>
+
+    <img src="loadout1.png">
+    <img src="loadout2.png">
+    <img src="loadout3.png">
+</div>
+
+<div class="box">
+    <h2>📱 HUD Code</h2>
+
+    <div class="codeBox" id="hudCode">
+        7267118437157815006-7267118437157815010
+    </div>
+
+    <button onclick="copyText('hudCode')">
+        Copy HUD Code
+    </button>
+</div>
+
+<div class="box">
+    <h2>🎯 Sensitivity Code</h2>
+
+    <div class="codeBox" id="sensCode">
+        7657250674315400424
+    </div>
+
+    <button onclick="copyText('sensCode')">
+        Copy Sensitivity Code
+    </button>
+</div>
+
+<div class="box">
+    <h2>💬 Join the Community</h2>
+
+    <a href="https://discord.gg/6SDzjyH6p" target="_blank">
+        Join My Discord Server
+    </a>
+</div>
+
+<script>
+function copyText(id) {
+    const text = document.getElementById(id).innerText.trim();
+
+    navigator.clipboard.writeText(text).then(() => {
+        alert("Copied!");
+    });
+}
+</script>
 
 </body>
 </html>
