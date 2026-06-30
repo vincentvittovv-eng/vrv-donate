@@ -1,419 +1,199 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>VRV Hub</title>
+    <title>biloggaming Hub</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            background:
-                radial-gradient(circle at top, #3a0505 0%, #090909 45%, #050505 100%);
-            color: white;
-            font-family: Arial, sans-serif;
-        }
-
-        header {
-            padding: 40px 18px;
-            text-align: center;
-            border-bottom: 1px solid rgba(255, 40, 40, 0.25);
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 46px;
-            color: #ff3333;
-            letter-spacing: 2px;
-        }
-
-        h2 {
-            margin-top: 0;
-            color: #ff4444;
-            text-align: center;
-        }
-
-        h3 {
-            color: #ff6666;
-            margin-bottom: 10px;
-        }
-
-        p {
-            color: #ddd;
-            font-size: 18px;
-        }
-
-        .tagline {
-            color: #ddd;
-            font-size: 18px;
-            margin-top: 10px;
-        }
-
-        .container {
-            width: 92%;
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 25px 0 50px;
-        }
-
-        .box {
-            background: rgba(18, 18, 18, 0.94);
-            border: 1px solid rgba(255, 40, 40, 0.25);
-            border-radius: 20px;
-            padding: 24px;
-            margin: 24px 0;
-            box-shadow: 0 0 25px rgba(255, 0, 0, 0.12);
-        }
-
-        .profile-card {
-            text-align: center;
-        }
-
-        .profile-name {
-            font-size: 32px;
-            color: #ff4444;
-            font-weight: bold;
-        }
-
-        .badges {
-            margin-top: 12px;
-        }
-
-        .badge {
-            display: inline-block;
-            background: #250808;
-            border: 1px solid #5a1a1a;
-            color: #ff9999;
-            padding: 8px 12px;
-            border-radius: 999px;
-            margin: 5px;
-            font-size: 14px;
-        }
-
-        .rules,
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 14px;
-        }
-
-        .rule,
-        .info-card {
-            background: #0b0b0b;
-            border: 1px solid #3a1a1a;
-            border-radius: 14px;
-            padding: 16px;
-            text-align: center;
-            font-size: 18px;
-        }
-
-        .rule b {
-            color: #ff5555;
-        }
-
-        .codeBox {
-            background: #050505;
-            border: 1px solid #3a1a1a;
-            border-radius: 14px;
-            padding: 14px;
-            margin: 12px 0;
-            word-break: break-all;
-            font-size: 16px;
-            color: #eee;
-        }
-
-        .qr {
-            display: block;
-            max-width: 330px;
-            width: 90%;
-            margin: 15px auto;
-            border-radius: 18px;
-        }
-
-        .loadout-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 18px;
-        }
-
-        .loadout-card {
-            background: #0b0b0b;
-            border: 1px solid #3a1a1a;
-            border-radius: 16px;
-            overflow: hidden;
-        }
-
-        .loadout-card img {
-            width: 100%;
-            display: block;
-        }
-
-        .loadout-info {
-            padding: 14px;
-        }
-
-        .loadout-info h3 {
-            margin: 0 0 6px;
-            color: #ff5555;
-        }
-
-        .loadout-info p {
-            margin: 0;
-            color: #bbb;
-            font-size: 15px;
-        }
-
-        button,
-        a.button {
-            display: inline-block;
-            background: linear-gradient(135deg, #b00000, #ff3030);
-            color: white;
-            border: none;
-            border-radius: 12px;
-            padding: 13px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            text-decoration: none;
-            margin: 8px;
-        }
-
-        button:hover,
-        a.button:hover {
-            filter: brightness(1.2);
-        }
-
-        .center {
-            text-align: center;
-        }
-
-        .small {
-            color: #aaa;
-            font-size: 15px;
-        }
-
-        footer {
-            text-align: center;
-            color: #777;
-            padding: 25px;
-            font-size: 14px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <h1>VRV HUB</h1>
-    <div class="tagline">CODM Loadouts • Timer Challenge • Settings • Community</div>
-</header>
+<nav>
+    <div class="logo">biloggaming</div>
 
-<div class="container">
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#loadouts">Loadouts</a>
+        <a href="#settings">Settings</a>
+        <a href="#support">Support</a>
+        <a href="https://discord.gg/6SDzjyH6P" target="_blank">Discord</a>
+    </div>
+</nav>
 
-    <div class="box profile-card">
-        <div class="profile-name">VRV</div>
-        <p>CODM Player • TikTok Live Timer Challenge</p>
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>biloggaming</h1>
+        <p>CODM Content Creator</p>
+        <span>Live Timer Challenge</span>
 
-        <div class="badges">
-            <span class="badge">Ranked Multiplayer</span>
-            <span class="badge">CODM Loadouts</span>
-            <span class="badge">Live Challenge</span>
+        <div class="hero-buttons">
+            <a href="#support" class="btn red">Support Me</a>
+            <a href="https://discord.gg/6SDzjyH6P" target="_blank" class="btn dark">Join Discord</a>
         </div>
     </div>
+</section>
 
-    <div class="box">
-        <h2>🔥 Live Timer Challenge</h2>
-        <p class="center">
-            Every gift, chat, or direct support affects my live timer.
-        </p>
+<section class="section">
+    <h2>Live Timer Challenge</h2>
 
-        <div class="rules">
-            <div class="rule">🎁 TikTok Gifts<br><b>1 Coin = +15 Seconds</b></div>
-            <div class="rule">💬 Chat Message<br><b>+2 Seconds</b></div>
-            <div class="rule">💸 GCash Direct<br><b>₱1 = +60 Seconds</b></div>
+    <div class="cards">
+        <div class="card">
+            <h3>🎁 TikTok Gifts</h3>
+            <p>1 Coin = <b>+15 Seconds</b></p>
+        </div>
+
+        <div class="card">
+            <h3>💬 Chat Message</h3>
+            <p><b>+2 Seconds</b></p>
+        </div>
+
+        <div class="card">
+            <h3>💸 GCash Direct</h3>
+            <p>₱1 = <b>+60 Seconds</b></p>
         </div>
     </div>
+</section>
 
-    <div class="box">
-        <h2>🎮 Player Information</h2>
+<section class="section" id="settings">
+    <h2>Player Information</h2>
 
-        <div class="info-grid">
+    <div class="cards">
+        <div class="card">
+            <h3>UID</h3>
+            <div class="code" id="uid">6951732684901056513</div>
+            <button onclick="copyText('uid')">Copy UID</button>
+        </div>
 
-            <div class="info-card">
-                <h3>👤 UID</h3>
-                <div class="codeBox" id="uidCode">
-                    6951732684901056513
-                </div>
-                <button onclick="copyText('uidCode')">Copy UID</button>
-            </div>
+        <div class="card">
+            <h3>HUD Code</h3>
+            <div class="code" id="hud">7267118437157815006-7267118437157815010</div>
+            <button onclick="copyText('hud')">Copy HUD</button>
+        </div>
 
-            <div class="info-card">
-                <h3>📱 HUD Code</h3>
-                <div class="codeBox" id="hudCode">
-                    7267118437157815006-7267118437157815010
-                </div>
-                <button onclick="copyText('hudCode')">Copy HUD</button>
-            </div>
-
-            <div class="info-card">
-                <h3>🎯 Sensitivity Code</h3>
-                <div class="codeBox" id="sensCode">
-                    7657250674315400424
-                </div>
-                <button onclick="copyText('sensCode')">Copy Sensitivity</button>
-            </div>
-
+        <div class="card">
+            <h3>Sensitivity Code</h3>
+            <div class="code" id="sensi">7657250674315400424</div>
+            <button onclick="copyText('sensi')">Copy Sensitivity</button>
         </div>
     </div>
+</section>
 
-    <div class="box">
-        <h2>💸 GCash Support</h2>
-        <p class="center">Scan the QR code below to support the stream directly.</p>
+<section class="section" id="loadouts">
+    <h2>My Loadouts</h2>
 
-        <img class="qr" src="gcash.png" alt="GCash QR Code">
-
-        <p class="center"><b>GCash Name: VRV</b></p>
-        <p class="center small">GCash direct gives the highest time bonus.</p>
+    <div class="filter-buttons">
+        <button onclick="filterLoadouts('all')">All</button>
+        <button onclick="filterLoadouts('smg')">SMG</button>
+        <button onclick="filterLoadouts('ar')">AR</button>
+        <button onclick="filterLoadouts('sniper')">Sniper</button>
+        <button onclick="filterLoadouts('shotgun')">Shotgun</button>
+        <button onclick="filterLoadouts('lmg')">LMG</button>
     </div>
 
-    <div class="box">
-        <h2>🔫 CODM Loadouts</h2>
-        <p class="center small">My current weapon setups. More loadouts will be added soon.</p>
+    <div class="loadout-grid">
 
-        <div class="loadout-grid">
-
-            <div class="loadout-card">
-                <img src="dlq.png" alt="CODM Loadout 1">
-                <div class="loadout-info">
-                    <h3>Loadout 1</h3>
-                    <p>Main ranked setup.</p>
-                </div>
-            </div>
-
-            <div class="loadout-card">
-                <img src="krm.png" alt="CODM Loadout 2">
-                <div class="loadout-info">
-                    <h3>Loadout 2</h3>
-                    <p>Fast movement setup.</p>
-                </div>
-            </div>
-
-            <div class="loadout-card">
-                <img src="lachmann.png" alt="CODM Loadout 4">
-                <div class="loadout-info">
-                    <h3>Loadout 3</h3>
-                    <p>Accuracy + movement.</p>
-                </div>
-            </div>
-
-            <div class="loadout-card">
-                <img src="locus.png" alt="CODM Loadout 5">
-                <div class="loadout-info">
-                    <h3>Loadout 3</h3>
-                    <p>Hybrid loadout.</p>
-                </div>
-            </div>
-
-            <div class="loadout-card">
-                <img src="mow.png" alt="CODM Loadout 6">
-                <div class="loadout-info">
-                    <h3>Loadout 3</h3>
-                    <p>Lason pick.</p>
-                </div>
-            </div>
-
-            <div class="loadout-card">
-                <img src="msmc.png" alt="CODM Loadout 7">
-                <div class="loadout-info">
-                    <h3>Loadout 3</h3>
-                    <p>Best non-meta gun.</p>
-                </div>
-            </div>
-
-            <div class="loadout-card">
-                <img src="pdw.png" alt="CODM Loadout 8">
-                <div class="loadout-info">
-                    <h3>Loadout 3</h3>
-                    <p>Close to long range .</p>
-                </div>
-            </div>
-
-            <div class="loadout-card">
-                <img src="sb.png" alt="CODM Loadout 9">
-                <div class="loadout-info">
-                    <h3>Loadout 3</h3>
-                    <p>Insane movement.</p>
-                </div>
-            </div>
-
-            <div class="loadout-card">
-                <img src="so14.png" alt="CODM Loadout 10">
-                <div class="loadout-info">
-                    <h3>Loadout 3</h3>
-                    <p>Accuracy.</p>
-                </div>
-            </div>
-
-            <div class="loadout-card">
-                <img src="so14wildfire.png" alt="CODM Loadout 11">
-                <div class="loadout-info">
-                    <h3>Loadout 3</h3>
-                    <p>Zero recoil.</p>
-                </div>
-            </div>
-
-            <div class="loadout-card">
-                <img src="sten.png" alt="CODM Loadout 12">
-                <div class="loadout-info">
-                    <h3>Loadout 3</h3>
-                    <p>TTK king.</p>
-                </div>
-            </div>
-
-            <div class="loadout-card">
-                <img src="tundra.png" alt="CODM Loadout 13">
-                <div class="loadout-info">
-                    <h3>Loadout 3</h3>
-                    <p>Rush rush rush.</p>
-                </div>
-            </div>
-
-            <div class="loadout-card">
-                <img src="ak47.png" alt="CODM Loadout 14">
-                <div class="loadout-info">
-                    <h3>Loadout 3</h3>
-                    <p>Underrated.</p>
-                </div>
-            </div>
-
+        <div class="loadout smg">
+            <img src="vmp.png">
+            <h3>VMP</h3>
+            <span>SMG • META</span>
         </div>
+
+        <div class="loadout sniper">
+            <img src="tundra.png">
+            <h3>Tundra</h3>
+            <span>Sniper • Ranked</span>
+        </div>
+
+        <div class="loadout smg">
+            <img src="sten.png">
+            <h3>Sten</h3>
+            <span>SMG • Aggressive</span>
+        </div>
+
+        <div class="loadout ar">
+            <img src="so14wildfire.png">
+            <h3>SO14 Wildfire</h3>
+            <span>AR • Ranked</span>
+        </div>
+
+        <div class="loadout ar">
+            <img src="so14.png">
+            <h3>SO14</h3>
+            <span>AR • Ranked</span>
+        </div>
+
+        <div class="loadout shotgun">
+            <img src="sb.png">
+            <h3>SB</h3>
+            <span>Shotgun • Close Range</span>
+        </div>
+
+        <div class="loadout smg">
+            <img src="pdw.png">
+            <h3>PDW</h3>
+            <span>SMG • Aggressive</span>
+        </div>
+
+        <div class="loadout smg">
+            <img src="msmc.png">
+            <h3>MSMC</h3>
+            <span>SMG • Fast TTK</span>
+        </div>
+
+        <div class="loadout lmg">
+            <img src="mow.png">
+            <h3>MOW</h3>
+            <span>LMG • Heavy Fire</span>
+        </div>
+
+        <div class="loadout sniper">
+            <img src="locus.png">
+            <h3>Locus</h3>
+            <span>Sniper • Ranked</span>
+        </div>
+
+        <div class="loadout ar">
+            <img src="lachmann.png">
+            <h3>Lachmann</h3>
+            <span>AR • Stable</span>
+        </div>
+
+        <div class="loadout shotgun">
+            <img src="krm.png">
+            <h3>KRM</h3>
+            <span>Shotgun • Aggressive</span>
+        </div>
+
+        <div class="loadout sniper">
+            <img src="dlq.png">
+            <h3>DLQ</h3>
+            <span>Sniper • Classic</span>
+        </div>
+
+        <div class="loadout ar">
+            <img src="ak47.png">
+            <h3>AK47</h3>
+            <span>AR • META</span>
+        </div>
+
     </div>
+</section>
 
-    <div class="box center">
-        <h2>💬 Join the Community</h2>
+<section class="section" id="support">
+    <h2>Support the Stream</h2>
 
-        <a class="button" href="https://discord.gg/6SDzjyH6P" target="_blank">
-            Join My Discord Server
-        </a>
+    <div class="support-box">
+        <img src="gcash.png" class="qr">
+        <p><b>GCash Name: VRV</b></p>
+        <p>GCash Direct: ₱1 = +60 Seconds</p>
     </div>
-
-</div>
+</section>
 
 <footer>
-    VRV Hub • Built for the live challenge community
+    biloggaming Hub • CODM Community
 </footer>
 
-<script>
-function copyText(id) {
-    const text = document.getElementById(id).innerText.trim();
-
-    navigator.clipboard.writeText(text).then(() => {
-        alert("Copied!");
-    });
-}
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
